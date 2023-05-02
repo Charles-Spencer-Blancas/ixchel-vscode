@@ -1,0 +1,25 @@
+{
+  "name": "ixchel",
+  "displayName": "Ixchel",
+  "description": "Syntax highlighting for Ixchel",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ixchel",
+      "aliases": ["Ixchel", "ixchel"],
+      "extensions": [".ixh"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ixchel",
+      "scopeName": "text.ixchel",
+      "path": "./syntaxes/ixchel.tmLanguage.json"
+    }]
+  }
+}

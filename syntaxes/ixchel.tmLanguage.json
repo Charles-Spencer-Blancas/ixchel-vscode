@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ixchel",
+	"patterns": [
+		{
+			"include": "#tags"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.other.ixchel",
+			"begin": ">?{",
+			"end": "}",
+			"_comment" : "Match the start with >{ or {, and the end with }.",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ixchel",
+					"match": "\\\\."
+				}
+			]
+		},
+		"tags": {
+			"name": "entity.name.tag.ixchel",
+			"match": "^\\s*[^\\.#%>\\s]*",
+			"_comment": "^\\s*: Match any whitespace at the beginning of the line. [^\\.#%>\\s]*: Match any character that is not a whitespace, a dot, a hash, a percent sign or a greater than sign." 
+		}
+	},
+	"scopeName": "text.ixchel"
+}
