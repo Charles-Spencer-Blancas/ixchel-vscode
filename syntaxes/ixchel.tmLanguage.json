@@ -3,29 +3,66 @@
 	"name": "Ixchel",
 	"patterns": [
 		{
-			"include": "#tags"
+			"include": "#strings"
 		},
 		{
-			"include": "#strings"
+			"include": "#attributes"
+		},
+		{
+			"include": "#classes"
+		},
+		{
+			"include": "#ids"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#tags"
 		}
 	],
 	"repository": {
 		"strings": {
-			"name": "string.quoted.other.ixchel",
-			"begin": ">?{",
-			"end": "}",
-			"_comment" : "Match the start with >{ or {, and the end with }.",
 			"patterns": [
 				{
+					"contentName": "markup.other.ixchel",
+					"begin": ">{",
+					"end": "}"
+				},
+				{
+					"contentName": "string.quoted.other.ixchel",
+					"begin": "{",
+					"end": "}"
+				},
+				{
 					"name": "constant.character.escape.ixchel",
-					"match": "\\\\."
+					"match": "\\\\.",
+					"_comment": "backslash followed by any character is an escape sequence."
 				}
 			]
+		},
+		"comments": {
+			"name": "comment.line.ixchel",
+			"match": "\/\/.*",
+			"comment": "Match // and everything after it."
 		},
 		"tags": {
 			"name": "entity.name.tag.ixchel",
 			"match": "^\\s*[^\\.#%>\\s]*",
 			"_comment": "^\\s*: Match any whitespace at the beginning of the line. [^\\.#%>\\s]*: Match any character that is not a whitespace, a dot, a hash, a percent sign or a greater than sign." 
+		},
+		"attributes" : {
+			"name": "support.variable.ixchel",
+			"match": "%[^{\\s]*",
+			"_comment": "Match %anything and stop at { or whitespace."
+		},
+		"classes": {
+			"name": "support.class.ixchel",
+			"match": "\\.[^\\.#%>\\s]*"
+		},
+		"ids": {
+			"name": "entity.name.function.ixchel",
+			"match": "#[^\\.#%>\\s]*"
 		}
 	},
 	"scopeName": "text.ixchel"
