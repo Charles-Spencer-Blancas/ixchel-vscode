@@ -21,5 +21,11 @@
       "scopeName": "text.ixchel",
       "path": "./syntaxes/ixchel.tmLanguage.json"
     }]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charles-Spencer-Blancas/ixchel-vscode"
+  },
+  "license": "MIT",
+  "author": "Charles Spencer Blancas"
 }
