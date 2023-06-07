@@ -27,5 +27,6 @@
     "url": "https://github.com/Charles-Spencer-Blancas/ixchel-vscode"
   },
   "license": "MIT",
-  "author": "Charles Spencer Blancas"
+  "author": "Charles Spencer Blancas",
+  "publisher": "Charles Spencer Blancas"
 }

@@ -43,7 +43,7 @@
 		},
 		"comments": {
 			"name": "comment.line.ixchel",
-			"match": "\/\/.*",
+			"match": "\\s*\/\/.*",
 			"comment": "Match // and everything after it."
 		},
 		"tags": {
